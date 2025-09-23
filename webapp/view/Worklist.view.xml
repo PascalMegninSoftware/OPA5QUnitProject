@@ -22,40 +22,44 @@
 				updateFinished=".onUpdateFinished">
 				<headerToolbar>
 					<Toolbar>
-						<Label id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<Label id="tableHeader" text="{worklistView>/worklistTableTitle}" />
 					</Toolbar>
 				</headerToolbar>
 				<columns>
 					<Column width="33%" id="nameColumn">
-						<Text text="{i18n>TableNameColumnTitle}" id="nameColumnTitle"/>
+						<Text text="{i18n>TableNameColumnTitle}" id="nameColumnTitle" />
 					</Column>
 					<Column width="33%" id="categoryColumn">
-						<Text text="{i18n>TableCategoryColumnTitle}" id="categoryColumnTitle"/>
+						<Text text="{i18n>TableCategoryColumnTitle}" id="categoryColumnTitle" />
 					</Column>
 					<Column width="33%" id="unitNumberColumn" hAlign="End">
-						<Text text="{i18n>TableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+						<Text text="{i18n>TableUnitNumberColumnTitle}" id="unitNumberColumnTitle" />
 					</Column>
 				</columns>
 				<items>
 					<ColumnListItem vAlign="Middle">
 						<cells>
 							<ObjectIdentifier
-								title="{Title}"/>
+								title="{Title}" />
 							<Text
-								text="{Category}"/>
+								text="{Category}" />
 							<ObjectNumber
 								number="{
 									path: 'Price',
 									formatter: '.formatter.numberUnit'
 								}"
-								unit="{Currency}"/>
+								state="{
+				path: 'Price',
+				formatter: '.formatter.priceState'
+			}"
+								unit="{Currency}" />
 						</cells>
 					</ColumnListItem>
 				</items>
 			</Table>
 		</semantic:content>
 		<semantic:sendEmailAction>
-			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress" />
 		</semantic:sendEmailAction>
 	</semantic:FullscreenPage>
 </mvc:View>
