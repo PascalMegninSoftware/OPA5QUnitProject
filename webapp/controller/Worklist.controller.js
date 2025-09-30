@@ -4,12 +4,12 @@ sap.ui.define([
 	'../model/formatter',
 	'../model/FlaggedType',
 	'sap/m/library'
-], function(BaseController, JSONModel, formatter, FlaggedType, mobileLibrary) {
+], function (BaseController, JSONModel, formatter, FlaggedType, mobileLibrary) {
 	"use strict";
 
 	return BaseController.extend("sap.ui.demo.bulletinboard.controller.Worklist", {
 
-		types : {
+		types: {
 			flagged: new FlaggedType()
 		},
 
@@ -78,6 +78,13 @@ sap.ui.define([
 				sTitle = this.getResourceBundle().getText("worklistTableTitle");
 			}
 			this.getModel("worklistView").setProperty("/worklistTableTitle", sTitle);
+		},
+
+		onPress: function (oEvent) {
+			this.getRouter().navTo("post", {
+				// The source is the list item that got pressed
+				postId: oEvent.getSource().getBindingContext().getProperty("PostID")
+			});
 		},
 
 		/* =========================================================== */

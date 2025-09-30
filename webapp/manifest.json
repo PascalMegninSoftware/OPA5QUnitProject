@@ -92,6 +92,11 @@
 					"pattern": "",
 					"name": "worklist",
 					"target": "worklist"
+				},
+				{
+					"pattern": "Post/{postId}",
+					"name": "post",
+					"target": "post"
 				}
 			],
 			"targets": {
@@ -99,6 +104,11 @@
 					"name": "Worklist",
 					"id": "worklist",
 					"level": 1
+				},
+				"post": {
+					"name": "Post",
+					"id": "post",
+					"level": 2
 				}
 			}
 		}
