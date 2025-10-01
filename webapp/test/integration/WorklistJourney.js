@@ -29,4 +29,18 @@ sap.ui.define([
 		Then.iTeardownMyApp();
 	});
 
+	opaTest("Should be able to search for items", function (Given, When, Then) {
+
+		Given.iStartMyApp();
+		//Actions
+		When.onTheWorklistPage.iSearchFor("Bear");
+
+		// Assertions
+		Then.onTheWorklistPage.theTableHasOneItem();
+
+		// Cleanup
+		Then.iTeardownMyApp();
+	});
+
+
 });
