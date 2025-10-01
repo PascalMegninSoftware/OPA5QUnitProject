@@ -10,7 +10,7 @@ sap.ui.define([
 				actions: {
 					iPressTheBackButton: function () {
 						return this.waitFor({
-							id: "page",
+							id: "page1",
 							viewName: sViewName,
 							actions: new Press(),
 							errorMessage: "Did not find the nav button on object page"

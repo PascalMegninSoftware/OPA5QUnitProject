@@ -1,11 +1,13 @@
 sap.ui.define([
 	'sap/ui/test/Opa5',
 	'sap/ui/test/matchers/AggregationLengthEquals',
-	'sap/ui/test/matchers/I18NText'
+	'sap/ui/test/matchers/I18NText',
+	"sap/ui/test/actions/Press",
+	"sap/ui/test/matchers/BindingPath"
 ],
 	function (Opa5,
 		AggregationLengthEquals,
-		I18NText) {
+		I18NText, Press, BindingPath) {
 		"use strict";
 
 		var sViewName = "Worklist",
